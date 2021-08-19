@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+input,
+textarea,
+select {
+  border: none;
+  outline: none;
+  width: 50%;
+  background-color: rgb(245, 245, 245);
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+
+select.active {
+  background-color: rgba(180, 0, 0, 0.3);
+}
+
+input.active {
+  color: white;
+  background-color: rgba(180, 0, 0, 0.3);
+}
+
+textarea.active {
+  background-color: rgba(180, 0, 0, 0.3);
+}
+
+select {
+  text-align-last: center;
+  direction: ltr;
+}
+
+label {
+  padding: 4px 0;
+  font-weight: bold;
+}
+
+div#app {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(140, 160, 180);
+}
+
+div.title {
+  height: 10vh;
+}
+div.title h2 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: rgb(180, 0, 0);
+}
+
+form {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.addNewCar {
+  border: 3px solid rgb(180, 0, 0);
+  background-color: white;
+  text-transform: uppercase;
+  border-radius: 6px;
+  margin: 10px 0;
+  font-size: 20px;
+  padding: 4px 20px;
+}
+
+.addNewCar:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 20vh;
+  border-top: 2px solid black;
+  box-shadow: 0 0 7px 2px black;
+}
+
+section h2 {
+  font-size: 32px;
+  padding: 20px 20px;
+}
+
+section h3 {
+  color: rgb(61, 8, 8);
+}
+
+section .oneCar {
+  position: relative;
+  display: flex;
+  width: 1200px;
+  height: 300px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 7px;
+  box-sizing: content-box;
+  border: 2px solid black;
+  box-shadow: 0px 0 6px 1px black;
+  margin: 10px 0;
+}
+
+section .sendToReviewTeam {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgb(240, 240, 240);
+  width: 50%;
+  border-radius: 6px;
+  padding: 6px 0;
+  margin: 20px 0;
+}
+section .sendToReviewTeam:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+section .oneCar .extraOptions {
+  display: flex;
+  width: 70px;
+  flex-direction: column;
+  position: absolute;
+  right: -74px;
+  height: 300px;
+}
+
+section .oneCar .extraOptions button.deleteCar {
+  background-color: rgba(180, 0, 0, 0.1);
+  height: 50%;
+  border-radius: 7px;
+}
+
+section .oneCar .extraOptions button.deleteCar:hover {
+  background-color: rgba(180, 0, 0, 0.2);
+}
+
+section .oneCar .imgSection {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  overflow: hidden;
+  width: 400px;
+  height: 300px;
+}
+
+section .oneCar .imgSection img {
+  width: 100%;
+  height: 100%;
+}
+section .oneCar .carInfo {
+  width: 500px;
+  height: 300px;
+}
+
+section .oneCar .carInfo h1 {
+  font-size: 32px;
+  padding: 4px 0 4px 30px;
+}
+section .oneCar .carRentCost {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 300px;
+}
+
+section .oneCar .carRentCost h1 {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+section .oneCar .carRentCost div.priceDueTime {
+  width: 100%;
+  height: 180px;
+}
+
+section .oneCar .carRentCost div.priceDueTime div {
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  text-align: center;
+}
+
+section .oneCar .carRentCost div.priceDueTime div p {
+  font-size: 18px;
+}
+section .oneCar .carRentCost div.priceDueTime div span {
+  font-weight: bold;
+}
+
+section .oneCar .carRentCost .deposit {
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 22px;
+}
+section .oneCar .carRentCost .deposit span {
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+div.shortInfo {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+div.shortInfo aside p {
+  padding: 4px 0;
+  font-size: 18px;
+}
+
+div.shortInfo aside p span {
+  font-weight: bold;
+}
+
+div.longInfo {
+  padding: 4px 10px;
+  word-break: break-all;
+}
