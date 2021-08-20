@@ -196,21 +196,24 @@ export default {
       console.log(this.carList);
     },
     addNewCar() {
+      const allInputs = document.querySelectorAll(".fleet input");
+      const selects = document.querySelectorAll(".fleet select");
+      const textArea = document.querySelector(".fleet textarea");
       if (
-        // this.carBrand.length >= 2 &&
-        // this.carPower.length >= 2 &&
-        // this.carEngine.length >= 2 &&
-        // this.carGearShift.length >= 2 &&
-        // this.carAcceleration.length >= 2 &&
-        // this.carSeats.length >= 1 &&
-        // this.carProduction.length >= 2 &&
-        // this.carDrive.length >= 2 &&
-        // this.carImg.length >= 2 &&
-        // this.carDescription.length >= 2 &&
-        // this.price1to5.length >= 2 &&
-        // this.price6to13.length >= 2 &&
-        // this.price14plus.length >= 2 &&
-        // this.deposit.length >= 2
+        this.carBrand.length >= 2 &&
+        this.carPower.length >= 2 &&
+        this.carEngine.length >= 2 &&
+        this.carGearShift.length >= 2 &&
+        this.carAcceleration.length >= 2 &&
+        this.carSeats.length >= 1 &&
+        this.carProduction.length >= 2 &&
+        this.carDrive.length >= 2 &&
+        this.carImg.length >= 2 &&
+        this.carDescription.length >= 2 &&
+        this.price1to5.length >= 2 &&
+        this.price6to13.length >= 2 &&
+        this.price14plus.length >= 2 &&
+        this.deposit.length >= 2 &&
         this.carBrand.length > 1
       ) {
         this.carList.push({
@@ -245,10 +248,10 @@ export default {
           (this.price6to13 = ""),
           (this.price14plus = ""),
           (this.deposit = "");
+        textArea.classList.remove("active");
+        selects.forEach((select) => select.classList.remove("active"));
+        allInputs.forEach((input) => input.classList.remove("active"));
       } else {
-        const allInputs = document.querySelectorAll(".fleet input");
-        const selects = document.querySelectorAll(".fleet select");
-        const textArea = document.querySelector(".fleet textarea");
         selects.forEach((select) => {
           if (select.value === "") {
             select.classList.add("active");

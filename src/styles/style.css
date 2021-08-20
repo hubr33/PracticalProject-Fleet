@@ -10,22 +10,16 @@ select {
   border-radius: 6px;
 }
 
-select.active {
-  background-color: rgba(180, 0, 0, 0.3);
-}
-
-input.active {
-  color: white;
-  background-color: rgba(180, 0, 0, 0.3);
-}
-
-textarea.active {
-  background-color: rgba(180, 0, 0, 0.3);
-}
-
 select {
   text-align-last: center;
   direction: ltr;
+}
+
+select.active,
+input.active,
+textarea.active {
+  background-color: rgba(180, 0, 0, 0.3);
+  color: rgb(240, 240, 240);
 }
 
 label {
