@@ -1,28 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-input,
-textarea,
-select {
+main.fleet input,
+main.fleet textarea,
+main.fleet select {
   border: none;
   outline: none;
   width: 50%;
   background-color: rgb(245, 245, 245);
+  z-index: 1;
   padding: 3px 6px;
   border-radius: 6px;
 }
 
-select {
+main.fleet select {
   text-align-last: center;
   direction: ltr;
 }
 
-select.active,
-input.active,
-textarea.active {
+main.fleet label {
+  padding: 12px 0;
+}
+
+main.fleet select.active,
+main.fleet input.active,
+main.fleet textarea.active {
   background-color: rgba(180, 0, 0, 0.3);
   color: rgb(240, 240, 240);
 }
 
-label {
+main.fleet {
   padding: 4px 0;
   font-weight: bold;
 }
@@ -46,7 +51,7 @@ div.title h2 {
   color: rgb(180, 0, 0);
 }
 
-form {
+main form {
   height: 100%;
   display: flex;
   align-items: center;
@@ -54,7 +59,7 @@ form {
   flex-direction: column;
 }
 
-.addNewCar {
+main form .addNewCar {
   border: 3px solid rgb(180, 0, 0);
   background-color: white;
   text-transform: uppercase;
@@ -64,7 +69,7 @@ form {
   padding: 4px 20px;
 }
 
-.addNewCar:hover {
+main form .addNewCar:hover {
   background-color: rgb(240, 240, 240);
 }
 
