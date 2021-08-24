@@ -160,7 +160,11 @@
           </div>
         </div>
       </div>
-      <button v-if="this.carList.length >= 1" class="sendToReviewTeam">
+      <button
+        v-if="this.carList.length >= 1"
+        class="sendToReviewTeam"
+        @click="saveData"
+      >
         Wyślij zgłoszenie o dodaniu auta
       </button>
     </section>
@@ -190,31 +194,52 @@ export default {
     };
   },
   methods: {
+    saveData() {
+      let newCar = {
+        caseType: "fleet",
+        carBrand: this.carList[0].carBrand,
+        carPower: this.carList[0].carPower,
+        carEngine: this.carList[0].carEngine,
+        carGearShift: this.carList[0].carGearShift,
+        carAcceleration: this.carList[0].carAcceleration,
+        carConsumption: this.carList[0].carConsumption,
+        carSeats: this.carList[0].carSeats,
+        carProduction: this.carList[0].carProduction,
+        carDrive: this.carList[0].carDrive,
+        carImg: this.carList[0].carImg,
+        carDescription: this.carList[0].carDescription,
+        price1to5: this.carList[0].price1to5,
+        price6to13: this.carList[0].price6to13,
+        price14plus: this.carList[0].price14plus,
+        deposit: this.carList[0].deposit,
+      };
+      this.coachViewContext.binding.set("value", newCar);
+      this.coachViewContext.trigger();
+      console.log(newCar);
+    },
     deleteCar(id) {
-      console.log(this.carList);
       this.carList.splice(id, 1);
-      console.log(this.carList);
     },
     addNewCar() {
       const allInputs = document.querySelectorAll(".fleet input");
       const selects = document.querySelectorAll(".fleet select");
       const textArea = document.querySelector(".fleet textarea");
       if (
-        this.carBrand.length >= 2 &&
-        this.carPower.length >= 2 &&
-        this.carEngine.length >= 2 &&
-        this.carGearShift.length >= 2 &&
-        this.carAcceleration.length >= 2 &&
-        this.carSeats.length >= 1 &&
-        this.carProduction.length >= 2 &&
-        this.carDrive.length >= 2 &&
-        this.carImg.length >= 2 &&
-        this.carDescription.length >= 2 &&
-        this.price1to5.length >= 2 &&
-        this.price6to13.length >= 2 &&
-        this.price14plus.length >= 2 &&
-        this.deposit.length >= 2 &&
-        this.carBrand.length > 1
+        this.carBrand !== "" &&
+        this.carPower !== "" &&
+        this.carEngine !== "" &&
+        this.carGearShift !== "" &&
+        this.carAcceleration !== "" &&
+        this.carSeats !== "" &&
+        this.carProduction !== "" &&
+        this.carDrive !== "" &&
+        this.carImg !== "" &&
+        this.carDescription !== "" &&
+        this.price1to5 !== "" &&
+        this.price6to13 !== "" &&
+        this.price14plus !== "" &&
+        this.deposit !== "" &&
+        this.carBrand !== ""
       ) {
         this.carList.push({
           carBrand: this.carBrand,
@@ -233,6 +258,24 @@ export default {
           price14plus: this.price14plus,
           deposit: this.deposit,
         });
+        // let newCar = {
+        //   caseType: "fleet",
+        //   carBrand: this.carBrand,
+        //   carPower: this.carPower,
+        //   carEngine: this.carEngine,
+        //   carGearShift: this.carGearShift,
+        //   carAcceleration: this.carAcceleration,
+        //   carConsumption: this.carConsumption,
+        //   carSeats: this.carSeats,
+        //   carProduction: this.carProduction,
+        //   carDrive: this.carDrive,
+        //   carImg: this.carImg,
+        //   carDescription: this.carDescription,
+        //   price1to5: this.price1to5,
+        //   price6to13: this.price6to13,
+        //   price14plus: this.price14plus,
+        //   deposit: this.deposit,
+        // };
         (this.carBrand = ""),
           (this.carPower = ""),
           (this.carEngine = ""),
