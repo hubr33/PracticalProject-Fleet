@@ -221,3 +221,46 @@ div.longInfo {
   padding: 4px 10px;
   word-break: break-all;
 }
+
+@media (max-width: 1400px) {
+  .oneCar {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 1120px) {
+  .oneCar {
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 1024px) {
+  div.oneCar {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1200px;
+    width: 400px;
+  }
+
+  div.oneCar .carInfo {
+    width: 400px;
+  }
+
+  div.oneCar .carInfo h1 {
+    text-align: center;
+  }
+
+  div.carInfo .shortInfo {
+    flex-direction: column;
+    width: 400px;
+  }
+
+  div.carInfo .shortInfo aside p {
+    padding-left: 10px;
+  }
+
+  div.carInfo .longInfo {
+    width: 100%;
+    padding: 0px 0px;
+  }
+}
