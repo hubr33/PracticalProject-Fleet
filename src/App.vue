@@ -87,7 +87,9 @@
           v-model="carDescription"
           maxlength="150"
         ></textarea>
-        <button class="addNewCar">Dodaj nowe auto</button>
+        <button class="addNewCar" :disabled="this.carList.length === 1">
+          Dodaj nowe auto
+        </button>
       </form>
     </main>
     <section>
